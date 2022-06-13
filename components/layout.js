@@ -8,7 +8,7 @@ export default function Layout({children, title, description}){
                 <title>{title}</title>
                 <meta name='description' content={description} />
             </Head>
-            <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+            <nav className="nav px-2 ">
                 <div className="container flex flex-wrap justify-between items-center mx-auto">
                     <Link href="/">
                         <a className="flex items-center">
