@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 import React from 'react';
 import Cards from '../components/cards';
 
-export default function Home() {
+export default function About() {
 
   return (
     <Layout>
