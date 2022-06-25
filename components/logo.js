@@ -13,18 +13,18 @@ line-height: 20px;
 padding: 10px;
 
 &:hover img{
-    transform: rotate(20deg);
+    transform: rotate(-5deg);
 }
  `
 
  const Logo = () => {
-    const footPrintImg = `/images/footprint${useColorModeValue('','-dark')}.png`;
+    const footPrintImg = `/images/logo${useColorModeValue('','-dark')}.jpeg`;
 
     return (
         <Link href="/">
              <a>
                  <LogoBox>
-                    <Image src={footPrintImg} height={20} alt="logo " />
+                    <Image src={footPrintImg} width={35} height={35} alt="logo" />
                     <Text   color={useColorModeValue('gray.800', 'whiteAlpha.900')}
                             fontFamily='M PLUS Rounded 1c'
                             fontWeight="blod"
