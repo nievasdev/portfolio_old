@@ -1,17 +1,19 @@
-import Layout from '../components/layout';
-import React from 'react';
-import Cards from '../components/cards';
-import Scene from '../components/Scene';
+import { Container, Box, Heading } from '@chakra-ui/react'
 
-export default function Home() {
-
-  return (
-    <Layout>
-      <section className="md:h-full flex items-center text-gray-600">
-          <div className="Container px-5 py-24">
-                        <Scene />
-          </div>
-      </section>
-    </Layout>
-  )
+const Page = () => {
+    return  <Container>
+                <Box borderRadius="lg" bg="red" p={3} mb={6} align="center" >
+                    Hello I&apos;m a full-stack developer based in Uruguay!
+                </Box>
+                <Box display={{md:'flex'}}>
+                    <Box flexGrow={1}>
+                        <Heading as="h2" variant="page-title" >
+                             Mauro Nievas
+                        </Heading>
+                        <p>Full-stack developer</p>
+                    </Box>
+                </Box>
+            </Container> 
 }
+
+export default Page 

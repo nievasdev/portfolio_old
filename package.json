@@ -1,25 +1,38 @@
 {
   "name": "porfolio",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Mauro's website",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev -H 0.0.0.0",
     "build": "next build",
-    "start": "next start",
+    "prettier": "prettier -write .",
     "lint": "next lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mauro-jpg/porfolio.git"
+  },
+  "keywords": [],
+  "author": "Mauro Nievas<niev.mauro@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mauro-jpg/porfolio/issues"
+  },
+  "homepage": "https://github.com/Mauro-jpg/porfolio#readme",
   "dependencies": {
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "swr": "^1.3.0",
-    "three": "^0.141.0"
+    "@chakra-ui/icons": "^2.0.2",
+    "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "framer-motion": "^6.3.15",
+    "next": "^12.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.2"
+    "eslint": "^8.18.0",
+    "eslint-config-next": "^12.1.6",
+    "prettier": "^2.7.1"
   }
 }
