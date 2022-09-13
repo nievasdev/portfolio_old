@@ -44,7 +44,8 @@ const Page = () => {
                         <Heading as="h3" variant="section-title">
                             Work
                         </Heading>
-                        <Paragraph>As a young computing enthusiast, I studied programming in a 
+                        <Paragraph>
+                            As a young computing enthusiast, I studied programming in a 
                             selft-taught way since I was 12 years old,
                             I am currently studying computer engineering and I have experience with
                             various technologies, I've been with Javascript and Python for almost 5
