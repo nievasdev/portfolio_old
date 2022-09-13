@@ -49,7 +49,7 @@ const Page = () => {
                             I am currently studying computer engineering and I have experience with
                             various technologies, I've been with Javascript and Python for almost 5
                             years, and I have developed for both backend and frontend,
-                            I am looking for new technological challenges to grow as a developer &nbsp;
+                            I am looking for new technological challenges to grow as a developer
                             <NextLink href="/work/inkdrop"><Link>Inkdrop</Link></NextLink>.
                         </Paragraph>
                         <Box align="center" my={4}>
