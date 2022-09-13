@@ -48,7 +48,7 @@ const Page = () => {
                             As a young computing enthusiast, I studied programming in a 
                             selft-taught way since I was 12 years old,
                             I am currently studying computer engineering and I have experience with
-                            various technologies, I've been with Javascript and Python for almost 5
+                            various technologies, I ve been with Javascript and Python for almost 5
                             years, and I have developed for both backend and frontend,
                             I am looking for new technological challenges to grow as a developer
                             <NextLink href="/work/inkdrop"><Link>Inkdrop</Link></NextLink>.
