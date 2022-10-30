@@ -2,7 +2,6 @@ import NextLink from 'next/link'
 import { 
     Container, 
     Box,
-    Link,
     Heading, 
     Image,
     Button,
@@ -13,6 +12,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
+import { Meta } from '../components/work'
 
 const Page = () => {
     return  <Layout>
@@ -50,8 +50,7 @@ const Page = () => {
                             I am currently studying computer engineering and I have experience with
                             various technologies, I ve been with Javascript and Python for almost 5
                             years, and I have developed for both backend and frontend,
-                            I am looking for new technological challenges to grow as a developer
-                            <NextLink href="/work/inkdrop"><Link>Inkdrop</Link></NextLink>.
+                            I am looking for new technological challenges to grow as a developer.
                         </Paragraph>
                         <Box align="center" my={4}>
                             <NextLink href="/works">
@@ -65,6 +64,22 @@ const Page = () => {
                         <Heading as="h3" variant="section-title">
                             Bio
                         </Heading>
+                        <BioSection>
+                            <BioYear>2022 - present</BioYear>
+                            Worked at <Meta>Antel</Meta> - <i>Web developer</i>
+                        </BioSection>
+                        <BioSection>
+                            <BioYear>2021 - 2022</BioYear>
+                            Worked at <Meta>Up show</Meta> - <i>Web developer</i>
+                        </BioSection>
+                        <BioSection>
+                            <BioYear>2018 - 2021</BioYear>
+                            Worked at <Meta>Hacknoid</Meta> - <i>sSr developer</i>
+                        </BioSection>
+                        <BioSection>
+                            <BioYear>2017 - 2018</BioYear>
+                            Worked at <Meta>Gestion Total</Meta> - <i>Jr developer</i>
+                        </BioSection>
                         <BioSection>
                             <BioYear>1996</BioYear>
                             Born in Mercedes, Uruguay.
