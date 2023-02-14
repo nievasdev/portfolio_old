@@ -45,7 +45,7 @@ const Page = () => {
                             Me
                         </Heading>
                         <Paragraph>
-                            As a passionate young computing enthusiast, I taught myself programming at the age of 12 and am now pursuing a degree in computer engineering. I have extensive experience with a range of technologies and have been working with JavaScript and Python for nearly 5 years. I have developed both backend and frontend applications and am always seeking new technological challenges to enhance my growth as a developer.
+                        As a highly motivated and enthusiastic young computer enthusiast, I have a strong passion for programming and have been self-taught since the age of 12. Currently, I am pursuing a degree in computer engineering, which has further deepened my knowledge and skills in the field. With over 6 years of experience working with JavaScript and Python, I have a proven track record of successfully developing both backend and frontend applications. I am eager to bring my expertise and passion to a new challenge, where I can continue to grow as a developer and make a meaningful contribution to the company.
                         </Paragraph>
                         <Box align="center" my={4}>
                             <NextLink href="/works">
