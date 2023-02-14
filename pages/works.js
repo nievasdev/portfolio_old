@@ -5,6 +5,7 @@ import Layout from "../components/layouts/article";
 import novatech from "../public/images/novatech.png";
 import hacknoid from "../public/images/hacknoid1.jpg";
 import upshow from "../public/images/UPshow.png";
+import gestionTotal from "../public/images/gestiontotal.png";
 
 const Works = () => {
     return(
@@ -18,6 +19,11 @@ const Works = () => {
                         <WorkGridItem id="hacknoid" title="Hacknoid" thumbnail={hacknoid}>
                             Automated IT security audit service 
                         </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem id="gestiontotal" title="Gestion Total" thumbnail={gestionTotal} >
+                            Business management software
+                        </ WorkGridItem >
                     </Section>
                     <Section>
                         <WorkGridItem id="novatech" title="Novatech" thumbnail={novatech}>
