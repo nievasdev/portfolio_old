@@ -4,7 +4,7 @@ import { mode } from '@chakra-ui/theme-tools';
 const styles = {
     global: props => ({
         body : {
-            bg: mode('#f0e7db','#202023')(props)
+            bg: mode('#CEC4C4','#000000')(props)
         }
     })
 }
@@ -16,7 +16,7 @@ const components = {
           textDecoration: 'underline',
           fontSize: 20,
           textUnderlineOffset: 6,
-          textDecorationColor: '#525252',
+          textDecorationColor: '#E65D57',
           textDecorationThickness: 4,
           marginTop: 3,
           marginBottom: 4
@@ -32,7 +32,7 @@ const components = {
   }
   
   const fonts = {
-    heading: "'M PLUS Rounded 1c'"
+    heading: "'hacknerd M PLUS Rounded 1c'"
   }
   
   const colors = {

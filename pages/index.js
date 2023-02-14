@@ -45,12 +45,7 @@ const Page = () => {
                             Work
                         </Heading>
                         <Paragraph>
-                            As a young computing enthusiast, I studied programming in a 
-                            selft-taught way since I was 12 years old,
-                            I am currently studying computer engineering and I have experience with
-                            various technologies, I ve been with Javascript and Python for almost 5
-                            years, and I have developed for both backend and frontend,
-                            I am looking for new technological challenges to grow as a developer.
+                            As a passionate young computing enthusiast, I taught myself programming at the age of 12 and am now pursuing a degree in computer engineering. I have extensive experience with a range of technologies and have been working with JavaScript and Python for nearly 5 years. I have developed both backend and frontend applications and am always seeking new technological challenges to enhance my growth as a developer.
                         </Paragraph>
                         <Box align="center" my={4}>
                             <NextLink href="/works">
