@@ -16,7 +16,7 @@ const Work = () => {
 
                 The backend at Hacknoid was built using Python and Django, and the frontend was migrated from PHP to React, a process that took approximately one and a half years to complete.
 
-                During my time at this company, I accumulated 3 years of experience in Javascript, Python, and Mysql, as well as a minimal amount of exposure to PHP and React.
+                During my time at this company, I accumulated 3 years of experience in Javascript, Python, and Mysql, as well as a minimal amount of exposure to PHP and React.S
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
