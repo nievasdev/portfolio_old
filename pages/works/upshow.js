@@ -3,26 +3,22 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, Meta, WorkImage } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
-import hacknoidImage from '../../public/images/hacknoid.png'
+import upshowImage from '../../public/images/UPshow.png'
 const Work = () => {
     return (
         <Layout title="Novatech">
             <Container>
                 <Title>
-                    Hacknoid <Badge>2018 to 2021</Badge>
+                    UP Show <Badge>2021</Badge>
                 </Title>
                 <P>
-                I began my employment at Hacknoid in June and started as a Junior role. Over time, I gained a comprehensive understanding of the entire company structure, including both backend and frontend systems.
-
-                The backend at Hacknoid was built using Python and Django, and the frontend was migrated from PHP to React, a process that took approximately one and a half years to complete.
-
-                During my time at this company, I accumulated 3 years of experience in Javascript, Python, and Mysql, as well as a minimal amount of exposure to PHP and React.JS
+                    At Upshow, I gained valuable experience with React, Node, and Scrum Methodology. My role was to gather data metrics from our clients, development teams, and the uptime of our services, in order to provide a clear and comprehensive overview of the overall status of the company.
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Website</Meta>
-                        <Link href='https://www.hacknoid.com/'>
-                            Hacknoid <ExternalLinkIcon mx="2px" />
+                        <Link href='https://www.upshow.tv/'>
+                            UP Show <ExternalLinkIcon mx="2px" />
                         </Link>
                     </ListItem>
                     <ListItem>
@@ -31,10 +27,10 @@ const Work = () => {
                     </ListItem>
                     <ListItem>
                         <Meta>Stack</Meta>
-                        <span>Python, Javascript, NextJS, React</span>
+                        <span>Node, Javascript, NextJS, React JS</span>
                     </ListItem>
                 </List>
-                <WorkImage src={hacknoidImage.src} alt="Hacknoid" />
+                <WorkImage src={upshowImage.src} alt="UP Showm" />
             </Container>
         </Layout>
     )
