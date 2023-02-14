@@ -42,7 +42,7 @@ const Page = () => {
                     </Box>
                     <Section delay={0.1}>
                         <Heading as="h3" variant="section-title">
-                            Work
+                            Me
                         </Heading>
                         <Paragraph>
                             As a passionate young computing enthusiast, I taught myself programming at the age of 12 and am now pursuing a degree in computer engineering. I have extensive experience with a range of technologies and have been working with JavaScript and Python for nearly 5 years. I have developed both backend and frontend applications and am always seeking new technological challenges to enhance my growth as a developer.
