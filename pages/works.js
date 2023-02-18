@@ -1,4 +1,4 @@
-import { Container, SimpleGrid } from "@chakra-ui/react"
+import { Container, SimpleGrid, Heading } from "@chakra-ui/react"
 import Section from '../components/section'
 import { WorkGridItem } from "../components/grid-item"
 import Layout from "../components/layouts/article";
@@ -6,6 +6,7 @@ import novatech from "../public/images/novatech.png";
 import hacknoid from "../public/images/hacknoid1.jpg";
 import upshow from "../public/images/UPshow.png";
 import gestionTotal from "../public/images/gestiontotal.png";
+import meteor from "../public/images/meteor.png";
 
 const Works = () => {
     return(
@@ -28,6 +29,16 @@ const Works = () => {
                     <Section>
                         <WorkGridItem id="novatech" title="Novatech" thumbnail={novatech}>
                             A web page for a Sftware Factory 
+                        </WorkGridItem>
+                    </Section>
+                </SimpleGrid>
+                <Heading as="h3" fontSize={20} mb={4}  variant="section-title">
+                    Tests
+                </Heading>
+                <SimpleGrid columns={[1,1,2]} gap={6}>
+                    <Section>
+                        <WorkGridItem id="meteor" title="Meteor" thumbnail={meteor}>
+                            A website intended for stock management. 
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
