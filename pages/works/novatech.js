@@ -19,8 +19,14 @@ const Work = () => {
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
+                        <Meta>Test Website</Meta>
+                        <Link href='https://novatech.vercel.app/'>
+                            Noxatech Vercel <ExternalLinkIcon mx="2px" target='_blank'/>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
                         <Meta>Website</Meta>
-                        <Link href='https://www.novatech.com.uy'>
+                        <Link href='https://www.novatech.com.uy' target='_blank'>
                             Novatech <ExternalLinkIcon mx="2px" />
                         </Link>
                     </ListItem>
