@@ -15,8 +15,7 @@ const Work = () => {
                     Novatech <Badge>2022</Badge>
                 </Title>
                 <P>
-                    The more dificult whit this page was build that the particles in the background,
-                    I needet remake a particular solution for the compatibility whit the current react version
+                The most difficult thing with this page was building the particles in the background. I needed to remake a specific solution for compatibility with the current React version.
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>

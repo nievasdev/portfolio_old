@@ -12,7 +12,7 @@ const Work = () => {
                     Hacknoid <Badge>2018 to 2021</Badge>
                 </Title>
                 <P>
-                I began my employment at Hacknoid in June and started as a Junior role. Over time, I gained a comprehensive understanding of the entire company structure, including both backend and frontend systems.
+                I began my employment at Hacknoid in June and started as a Junior role. Over time, I gained understanding of the entire company structure, including both backend and frontend systems.
 
                 The backend at Hacknoid was built using Python and Django, and the frontend was migrated from PHP to React, a process that took approximately one and a half years to complete.
 
