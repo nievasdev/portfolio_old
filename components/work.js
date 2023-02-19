@@ -2,10 +2,10 @@ import NextLink from 'next/link'
 import { Heading, Box, Image, Link, Badge } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
-export const Title = ({ children }) => (
+export const Title = ({ children, reference }) => (
         <Box>
-            <NextLink href="/works">
-                <Link>Works</Link>
+            <NextLink href={`/${reference}`}>
+                <Link>{ reference }</Link>
             </NextLink>
             <span>
                 &nbsp;

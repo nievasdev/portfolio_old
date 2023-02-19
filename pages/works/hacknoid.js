@@ -8,7 +8,7 @@ const Work = () => {
     return (
         <Layout title="Novatech">
             <Container>
-                <Title>
+                <Title reference={"works"}>
                     Hacknoid <Badge>2018 to 2021</Badge>
                 </Title>
                 <P>

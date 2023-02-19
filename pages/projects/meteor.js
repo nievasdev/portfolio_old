@@ -1,4 +1,4 @@
-import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
+import { Container, Link, List, ListItem } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, Meta, WorkImage } from '../../components/work'
 import P from '../../components/paragraph'
@@ -12,7 +12,7 @@ const Work = () => {
     return (
         <Layout title="Novatech">
             <Container>
-                <Title>
+                <Title reference={"projects"}>
                     Meteor
                 </Title>
                 <P>
