@@ -8,7 +8,7 @@ import image2 from '../../public/images/MeteorProducts.png'
 import image3 from '../../public/images/MeteorSales.png'
 import image4 from '../../public/images/MeteorLogin.png'
 
-const Work = () => {
+const Project = () => {
     return (
         <Layout title="Novatech">
             <Container>
@@ -47,4 +47,4 @@ const Work = () => {
     )
 }
 
-export default Work
+export default Project
