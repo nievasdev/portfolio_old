@@ -19,11 +19,14 @@ const Projects = () => {
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="tailwinds" title="Tailwinds" thumbnail={tailwind} reference={"projects"}>
+                        <WorkGridItem id="tailwinds" title="Tailwind" thumbnail={tailwind} reference={"projects"}>
                             News website. 
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
+                <Heading as="h3" fontSize={20} mb={4}  variant="section-title">
+                    Python
+                </Heading>
             </Container>
         </Layout>
     )

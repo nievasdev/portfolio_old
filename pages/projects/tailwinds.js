@@ -11,7 +11,7 @@ const Project = () => {
         <Layout title="Novatech">
             <Container>
                 <Title reference={"projects"}>
-                    Tailwinds
+                    Tailwind
                 </Title>
                 <P>
                 Tailwind CSS is an open-source UI design framework for the quick and easy creation of custom designs for websites and web applications. The focus of Tailwind CSS is to provide a large number of pre-built and highly configurable utility classes that can be applied directly in HTML to design web pages without having to write custom CSS. This makes it easy to create highly customized and responsive designs, resulting in a smoother and enhanced user experience. Additionally, Tailwind CSS also includes a range of useful development tools and features, such as a default color palette, tools for creating shadows, animation effects, and more.
@@ -26,7 +26,7 @@ const Project = () => {
                             Website
                         </Meta>
                         <Link href="https://mauroapp.netlify.app/">
-                         Tailwinds <ExternalLinkIcon mx="2px" />
+                         Tailwind <ExternalLinkIcon mx="2px" />
                         </Link>
                     </ListItem>
                     <ListItem>
@@ -41,7 +41,7 @@ const Project = () => {
                     </ListItem>
                     <ListItem>
                         <Meta>Stack</Meta>
-                        <span>NextJS, React, Tailwinds</span>
+                        <span>NextJS, React, Tailwind</span>
                     </ListItem>
                 </List>
                 <WorkImage src={image1.src} alt="Meteor" />
