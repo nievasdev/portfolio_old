@@ -17,37 +17,39 @@ import { Meta } from '../components/work'
 const Page = () => {
     return  <Layout>
                 <Container>
-                    <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} p={3} mb={6} align="center" >
-                        Hello I&apos;m a full-stack developer based in Uruguay!
-                    </Box>
-                    <Box display={{md:'flex'}}>
-                        <Box flexGrow={1}>
-                            <Heading as="h2" variant="page-title" >
-                                Mauro Nievas
-                            </Heading>
-                            <p>Full-stack developer</p>
-                        </Box>
-                        <Box flexShrink={0} mt={{base:4, md:0}} ml={{md:6}} align="center">
-                            <Image 
-                                borderColor="whiteAlpha.800" 
-                                borderWidth={2} 
-                                borderStyle="solid" 
-                                maxWidth="100px" 
-                                display="inline-block" 
-                                borderRadius="full" 
-                                src="/images/mauro.jpeg" 
-                                alt="Profile Image"
-                                />
-                        </Box>
-                    </Box>
                     <Section delay={0.1}>
-                        <Heading as="h3" variant="section-title">
+                        <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} p={2} mb={10} align="center" >
+                            Hello I&apos;m a full-stack developer based in Uruguay!
+                        </Box>
+                        <Box display={{md:'flex'}}>
+                            <Box flexGrow={1}>
+                                <Heading as="h2" variant="page-title" >
+                                    Mauro Nievas
+                                </Heading>
+                                <p>Full-stack developer</p>
+                            </Box>
+                            <Box flexShrink={0} mt={{base:4, md:0}} ml={{md:6}} align="center">
+                                <Image 
+                                    borderColor="whiteAlpha.800" 
+                                    borderWidth={2} 
+                                    borderStyle="solid" 
+                                    maxWidth="140px" 
+                                    display="inline-block" 
+                                    borderRadius="full" 
+                                    src="/images/mauro.jpeg" 
+                                    alt="Profile Image"
+                                    />
+                            </Box>
+                        </Box>
+                    </Section>
+                    <Section delay={0.4}>
+                        <Heading variant="section-title">
                             Me
                         </Heading>
                         <Paragraph>
                         As a highly motivated and young computer enthusiast, I have a strong passion for programming and have been self-taught since the age of 12. Currently, I am pursuing a degree in computer engineering, which has further deepened my knowledge and skills in the field. With over 6 years of experience working with JavaScript and Python, I have a proven track record of successfully developing both backend and frontend applications. I am eager to bring my expertise and passion to a new challenge, where I can continue to grow as a developer and make a meaningful contribution to the company.
                         </Paragraph>
-                        <Box align="center" my={4}>
+                        <Box align="center" my={12}>
                             <NextLink href="/works">
                                 <Button  colorScheme="teal">
                                     My porfolio <ChevronRightIcon />
@@ -55,7 +57,7 @@ const Page = () => {
                             </NextLink>
                         </Box>
                     </Section>
-                    <Section delay={0.2}>
+                    <Section delay={0.8}>
                         <Heading as="h3" variant="section-title">
                             Bio
                         </Heading>

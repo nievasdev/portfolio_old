@@ -26,7 +26,7 @@ const Work = () => {
                         <span>Python, Javascript</span>
                     </ListItem>
                 </List>
-                <WorkImage src={gestionTotal.src} alt="Hacknoid" />
+                <WorkImage src={gestionTotal.src} alt="Gestion Total" />
             </Container>
         </Layout>
     )

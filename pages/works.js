@@ -12,20 +12,20 @@ const Works = () => {
         <Layout>
             <Container>
                 <SimpleGrid columns={[1,1,2]} gap={6}>
-                    <Section>
+                    <Section delay={0.1}>
                         <WorkGridItem id="upshow" title="UP Show" thumbnail={upshow} reference={"works"} />
                     </Section>
-                    <Section>
+                    <Section delay={0.2}>
                         <WorkGridItem id="hacknoid" title="Hacknoid" thumbnail={hacknoid} reference={"works"} >
                             Automated IT security audit service 
                         </WorkGridItem>
                     </Section>
-                    <Section>
+                    <Section delay={0.3}>
                         <WorkGridItem id="gestiontotal" title="Gestion Total" thumbnail={gestionTotal} reference={"works"} >
                             Business management software
                         </ WorkGridItem >
                     </Section>
-                    <Section>
+                    <Section delay={0.4}>
                         <WorkGridItem id="novatech" title="Novatech" thumbnail={novatech} reference={"works"}>
                             A web page for a Sftware Factory 
                         </WorkGridItem>
