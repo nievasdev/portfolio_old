@@ -25,6 +25,7 @@
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@use-it/interval": "^1.0.0",
     "framer-motion": "^6.5.1",
     "next": "^12.1.6",
     "react": "^18.2.0",
