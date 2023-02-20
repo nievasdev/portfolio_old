@@ -36,7 +36,7 @@ const Projects = () => {
                 <SimpleGrid columns={[1,1,2]} gap={6} >
                     <Section delay={0.5}>
                         <WorkGridItem id="flask" title="Flask" thumbnail={flask} reference={"projects"}>
-                            Web page for the voting of a physics teachers' association president. 
+                            Web page for the voting of a physics teachers association president. 
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>
