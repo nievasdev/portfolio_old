@@ -86,7 +86,7 @@ const Page = () => {
                             </BioSection>
                         </Section>
                         <Box align="center" opacity={0.04} fontSize="sm">
-                            This website is built based on the <a href='https://www.craftz.dog/' target='_blank'>Takuya Matsuyama website</a>.
+                            This website is built based on the <a href='https://www.craftz.dog/' >Takuya Matsuyama website</a>.
                         </Box>
 
                     </Container>
