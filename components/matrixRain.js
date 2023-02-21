@@ -6,14 +6,14 @@ import useInterval from '@use-it/interval';
 const VALID_CHARS = `abcdefghijklmnopqrstuvwxyz0123456789$+-*/=%"'#&_(),.;:?!\\|{}<>[]^~`;
 const STREAM_MUTATION_ODDS = 0.02;
 
-const MIN_STREAM_SIZE = 70;
-const MAX_STREAM_SIZE = 100;
+const MIN_STREAM_SIZE = 13;
+const MAX_STREAM_SIZE = 13;
 
 const MIN_INTERVAL_DELAY = 150;
 const MAX_INTERVAL_DELAY = 180;
 
 const MIN_DELAY_BETWEEN_STREAMS = 0;
-const MAX_DELAY_BETWEEN_STREAMS = 100;
+const MAX_DELAY_BETWEEN_STREAMS = 16000;
 
 const getRandInRange = (min, max) =>
 	Math.floor(Math.random() * (max - min)) + min;
@@ -138,6 +138,7 @@ const MatrixRain = () => {
 				flexDirection: 'row',
 				justifyContent: 'center',
 			}}
+			key={containerRef}
 			ref={containerRef}>
 			{Array(streamCount).fill().map(keyChar => (
 				<RainStream key={keyChar} height={containerSize?.height} />
