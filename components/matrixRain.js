@@ -98,7 +98,7 @@ const RainStream = props => {
 					style={{
 						marginTop: 2,
 						// Reduce opacity for last chars
-						opacity: index < 6 ? 0.05 + index * 0.02 : 0.02,
+						opacity: index < 6 ? 0.08 + index * 0.03 : 0.02,
 						color: index === stream.length - 1 ? '#88ccca' : undefined,
 						textShadow:
 							index === stream.length - 1
