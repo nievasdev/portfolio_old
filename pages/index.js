@@ -11,8 +11,9 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import { Meta } from '../components/work'
+import { BioSection, BioYear } from '../components/bio';
+import { Meta } from '../components/work';
+import ReactTypingEffect from 'react-typing-effect';
 
 const Page = () => {
     return  <>
@@ -20,7 +21,27 @@ const Page = () => {
                     <Container>
                         <Section delay={0.1}>
                             <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} p={2} mb={10} align="center" >
-                                Hello I&apos;m a full-stack developer based in Uruguay!
+                                
+                                <ReactTypingEffect
+                                    text={[`Hello Word!, I'm a full-stack developer based in Uruguay!`]}
+                                    cursorRenderer={cursor => <h1>{cursor}</h1>}
+                                    eraseDelay={160000}
+                                    speed={90}
+                                    displayTextRenderer={(text, i) => {
+                                    return (
+                                        <h1>
+                                        {text.split('').map((char, i) => {
+                                            const key = `${i}`;
+                                            return (
+                                            <span
+                                                key={key}
+                                            >{char}</span>
+                                            );
+                                        })}
+                                        </h1>
+                                    );
+                                    }}        
+                                />
                             </Box>
                             <Box display={{md:'flex'}}>
                                 <Box flexGrow={1}>
