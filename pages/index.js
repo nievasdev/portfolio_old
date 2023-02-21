@@ -13,11 +13,9 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { Meta } from '../components/work'
-import MatrixRain from '../components/matrixRain'
 
 const Page = () => {
     return  <>
-                <MatrixRain />    
                 <Layout>
                     <Container>
                         <Section delay={0.1}>

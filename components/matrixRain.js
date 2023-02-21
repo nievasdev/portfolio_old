@@ -6,8 +6,8 @@ import useInterval from '@use-it/interval';
 const VALID_CHARS = `abcdefghijklmnopqrstuvwxyz0123456789$+-*/=%"'#&_(),.;:?!\\|{}<>[]^~`;
 const STREAM_MUTATION_ODDS = 0.02;
 
-const MIN_STREAM_SIZE = 10;
-const MAX_STREAM_SIZE = 60;
+const MIN_STREAM_SIZE = 70;
+const MAX_STREAM_SIZE = 100;
 
 const MIN_INTERVAL_DELAY = 5;
 const MAX_INTERVAL_DELAY = 10;
@@ -88,7 +88,8 @@ const RainStream = props => {
 				marginTop: topPadding,
 				marginLeft: 8,
 				marginRight: 8,
-				textShadow: '0px 0px 1px rgba(32, 194, 14, 0.2)',
+				textShadow: '0px 0px 1px rgba(32, 194, 14, 1)',
+				fontFamily: "minecraft",
 				fontSize: 18,
 			}}>
 			{stream.map((char, index) => (
@@ -101,7 +102,7 @@ const RainStream = props => {
 						color: index === stream.length - 1 ? '#88ccca' : undefined,
 						textShadow:
 							index === stream.length - 1
-								? '0px 0px 1px rgba(255, 255, 255, 0.2)'
+								? '0px 0px 1px rgba(255, 255, 255, 1)'
 								: undefined,
 					}}>
 					{char}
