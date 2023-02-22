@@ -27,7 +27,7 @@ const Page = () => {
                                     cursorRenderer={cursor => <h1>{cursor}</h1>}
                                     eraseDelay={160000}
                                     speed={90}
-                                    displayTextRenderer={(text, i) => {
+                                    displayTextRenderer={(text) => {
                                     return (
                                         <h1>
                                         {text.split('').map((char, i) => {
