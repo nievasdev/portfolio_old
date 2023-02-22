@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useRef, useState } from 'react';
 import useInterval from '@use-it/interval';
+import { useColorModeValue } from '@chakra-ui/react'
 
 // Constants
 const VALID_CHARS = `abcdefghijklmnopqrstuvwxyz0123456789$+-*/=%"'#&_(),.;:?!\\|{}<>[]^~`;
@@ -80,7 +81,7 @@ const RainStream = props => {
 	return (
 		<div
 			style={{
-				color: '#88ccca',
+				color: useColorModeValue('#000000','#88ccca'),
 				writingMode: 'vertical-rl',
 				textOrientation: 'upright',
 				userSelect: 'none',
@@ -98,8 +99,8 @@ const RainStream = props => {
 					style={{
 						marginTop: 2,
 						// Reduce opacity for last chars
-						opacity: index < 6 ? 0.08 + index * 0.03 : 0.02,
-						color: index === stream.length - 1 ? '#88ccca' : undefined,
+						opacity: index == 5 ? 0.17 : index < 5 ? 0.03 + index * useColorModeValue(0.04, 0.01) : 0,
+						color: index === stream.length - 1 ? useColorModeValue('#000000','#88ccca') : undefined,
 						textShadow:
 							index === stream.length - 1
 								? '0px 0px 1px rgba(255, 255, 255, 1)'

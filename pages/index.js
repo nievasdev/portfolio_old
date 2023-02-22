@@ -57,8 +57,7 @@ const Page = () => {
                                         borderStyle="solid" 
                                         maxWidth="140px" 
                                         display="inline-block" 
-                                        borderRadius="full" 
-                                        src="/images/mauro.jpeg" 
+                                        src={`images/logo${(useColorModeValue('','-dark'))}.png`}
                                         alt="Profile Image"
                                         />
                                 </Box>
