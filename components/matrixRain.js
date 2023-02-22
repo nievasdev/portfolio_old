@@ -81,7 +81,7 @@ const RainStream = props => {
 	return (
 		<div
 			style={{
-				color: useColorModeValue('#000000','#88ccca'),
+				color: (props.theme == 'dark' ? '#88ccca' : '#000000'),
 				writingMode: 'vertical-rl',
 				textOrientation: 'upright',
 				userSelect: 'none',
@@ -99,8 +99,8 @@ const RainStream = props => {
 					style={{
 						marginTop: 2,
 						// Reduce opacity for last chars
-						opacity: index < 5 ? 0.02 + index * (useColorModeValue(0.07, 0.03)) : 0,
-						color: index === stream.length - 1 ? (useColorModeValue('#000000','#88ccca')) : undefined,
+						opacity: index < 5 ? 0.02 + index * (props.theme == 'dark' ? 0.07 : 0.03) : 0,
+						color: index === stream.length - 1 ? (props.theme == 'dark' ? '#88ccca' : '#000000') : undefined,
 						textShadow:
 							index === stream.length - 1
 								? '0px 0px 1px rgba(255, 255, 255, 1)'
@@ -116,6 +116,7 @@ const RainStream = props => {
 const MatrixRain = () => {
 	const containerRef = useRef(null);
 	const [containerSize, setContainerSize] = useState(null); // ?{width, height}
+	const theme = useColorModeValue('white','dark');
 
 	useEffect(() => {
 		const boundingClientRect = containerRef.current.getBoundingClientRect();
@@ -142,7 +143,7 @@ const MatrixRain = () => {
 			key={containerRef}
 			ref={containerRef}>
 			{Array(streamCount).fill().map(keyChar => (
-				<RainStream key={keyChar} height={containerSize?.height} />
+				<RainStream key={keyChar} height={containerSize?.height} theme={theme} />
 			))}
 		</div>
 	);
