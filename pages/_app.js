@@ -19,7 +19,7 @@ const Website = ({ Component, pageProps, router}) => {
 
     };
 
-    timeoutId = setTimeout(onTimeout, 3970);
+    timeoutId = setTimeout(onTimeout, 3900);
 
     return (
         <ChakraProvider theme={theme}>
