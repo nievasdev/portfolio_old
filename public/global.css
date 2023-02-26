@@ -2,3 +2,21 @@
     font-family: 'Minecraft';
     src: url('minecraft/Minecraft.ttf');
 }
+
+.loading {
+  width: 55%;
+  position: fixed; /* Establece la posición como fija para que la imagen no se mueva con el desplazamiento de la página */
+  top: 40%; /* Establece la posición superior en 50% para que la imagen comience desde el punto medio de la página verticalmente */
+  left: 50%; /* Establece la posición izquierda en 50% para que la imagen comience desde el punto medio de la página horizontalmente */
+  transform: translate(-50%, -50%); /* Usa la función translate para mover la imagen hacia arriba y hacia la izquierda en un 50% del ancho y alto de la imagen, respectivamente, para centrarla en la página */
+}
+
+.loadingContent {
+    position: fixed; /* Establece la posición como fija para que el div no se mueva con el desplazamiento de la página */
+    top: 0; /* Establece la posición superior en 0 para que el div comience desde la parte superior de la pantalla */
+    left: 0; /* Establece la posición izquierda en 0 para que el div comience desde la parte izquierda de la pantalla */
+    width: 100%; /* Establece el ancho en 100% para que el div ocupe todo el ancho de la pantalla */
+    height: 100%; /* Establece la altura en 100% para que el div ocupe toda la altura de la pantalla */
+    background-color: #202023;
+  }
+  

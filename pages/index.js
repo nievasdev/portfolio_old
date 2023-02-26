@@ -5,7 +5,7 @@ import {
     Heading, 
     Image,
     Button,
-    useColorModeValue 
+    useColorModeValue
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
@@ -20,7 +20,7 @@ const Page = () => {
                 <Layout>
                     <Container>
                         <Section delay={0.1}>
-                            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} p={2} mb={10} align="center" >
+                            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} p={2} mb={10} align="center" boxShadow='xl'>
                                 
                                 <ReactTypingEffect
                                     text={[`Hello Word!, I'm a full-stack developer based in Uruguay!`]}
@@ -44,7 +44,7 @@ const Page = () => {
                                 />
                             </Box>
                             <Box display={{md:'flex'}}>
-                                <Box flexGrow={1}>
+                                <Box flexGrow={1} >
                                     <Heading as="h2" variant="page-title" >
                                         Mauro Nievas
                                     </Heading>
@@ -59,6 +59,7 @@ const Page = () => {
                                         display="inline-block" 
                                         src={`images/logo${(useColorModeValue('','-dark'))}.png`}
                                         alt="Profile Image"
+                                        boxShadow='dark-lg'
                                         />
                                 </Box>
                             </Box>
@@ -68,7 +69,7 @@ const Page = () => {
                                 Me
                             </Heading>
                             <Paragraph>
-                            As a highly motivated and young computer enthusiast, I have a strong passion for programming and have been self-taught since the age of 12. Currently, I am pursuing a degree in computer engineering, which has further deepened my knowledge and skills in the field. With over 6 years of experience working with JavaScript and Python, I have a proven track record of successfully developing both backend and frontend applications. I am eager to bring my expertise and passion to a new challenge, where I can continue to grow as a developer and make a meaningful contribution to the company.
+                                As a highly motivated and young computer enthusiast, I have a strong passion for programming and have been self-taught since the age of 12. Currently, I am pursuing a degree in computer engineering, which has further deepened my knowledge and skills in the field. With over 6 years of experience working with JavaScript and Python, I have a proven track record of successfully developing both backend and frontend applications. I am eager to bring my expertise and passion to a new challenge, where I can continue to grow as a developer and make a meaningful contribution to the company.
                             </Paragraph>
                             <Box align="center" my={12}>
                                 <NextLink href="/works">
@@ -106,7 +107,6 @@ const Page = () => {
                         <Box align="center" opacity={0.04} fontSize="sm">
                             This website is built based on the <a href='https://www.craftz.dog/' >Takuya Matsuyama website</a>.
                         </Box>
-
                     </Container>
                 </Layout>
             </>
