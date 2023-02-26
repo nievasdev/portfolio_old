@@ -5,6 +5,7 @@
 
 .loading {
   width: 55%;
+  min-width: 600px;
   position: fixed; /* Establece la posición como fija para que la imagen no se mueva con el desplazamiento de la página */
   top: 40%; /* Establece la posición superior en 50% para que la imagen comience desde el punto medio de la página verticalmente */
   left: 50%; /* Establece la posición izquierda en 50% para que la imagen comience desde el punto medio de la página horizontalmente */
