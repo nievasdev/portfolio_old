@@ -28,7 +28,7 @@ const Website = ({ Component, pageProps, router}) => {
             {
                 !showed ?
                 <div className="loadingContent">
-                    <img src={`images/loading.gif`} className={"loading"} />
+                    <img src={`images/loading.gif`} className={"loading"} loading="once" />
                 </div> :
                 <Layout router={router}>
                     <AnimatePresence exitBeforeEnter initial={true}>
