@@ -8,7 +8,7 @@ import Section from '../../components/section'
 
 const Work = () => {
     return (
-        <Layout title="Novatech">
+        <Layout title="Upshow">
             <Container>
                 <Section delay={0.1}>
                     <Title reference={"works"}>

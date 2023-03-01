@@ -10,7 +10,7 @@ import image4 from '../../public/images/MeteorLogin.png'
 
 const Project = () => {
     return (
-        <Layout title="Novatech">
+        <Layout title="Meteor">
             <Container>
                 <Title reference={"projects"}>
                     Meteor

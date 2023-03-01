@@ -8,7 +8,7 @@ import image2 from '../../public/images/TailwindPosts.png'
 
 const Project = () => {
     return (
-        <Layout title="Novatech">
+        <Layout title="Tailwinds">
             <Container>
                 <Title reference={"projects"}>
                     Tailwind
