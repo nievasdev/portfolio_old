@@ -38,10 +38,6 @@ const Project = () => {
                         <span>Flask, Jinja2, Postgres, Python</span>
                     </ListItem>
                 </List>
-                <WorkImage src={image1.src} alt="Meteor" />
-                <WorkImage src={image2.src} alt="Meteor2" />
-                <WorkImage src={image3.src} alt="Meteor3" />
-                <WorkImage src={image4.src} alt="Meteor4" />
             </Container>
         </Layout>
     )
