@@ -1,12 +1,8 @@
 import { Container, Link, List, ListItem } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, Meta, WorkImage } from '../../components/work'
+import { Title, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
-import image1 from '../../public/images/MeteorBrands.png'
-import image2 from '../../public/images/MeteorProducts.png'
-import image3 from '../../public/images/MeteorSales.png'
-import image4 from '../../public/images/MeteorLogin.png'
 
 const Project = () => {
     return (
