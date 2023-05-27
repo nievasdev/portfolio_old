@@ -39,7 +39,7 @@ function SwitchElement(element, id) {
       return (
         <List ml={4} my={4}>
           {element.children.map(ListElement => {
-            return <ListItem>{SwitchElement(ListElement)}</ListItem>
+            return <ListItem key={Math.random()}>{SwitchElement(ListElement)}</ListItem>
           })}
         </List>
       )
@@ -76,7 +76,7 @@ function Works() {
       <Container>
         {workContent.map(element => {
           delay += 0.1;
-          return <Section delay={delay} >{SwitchElement(element, id)}</Section>
+          return <Section delay={delay} key={Math.random()} >{SwitchElement(element, id)}</Section>
         })}
       </Container>
     </Layout>
