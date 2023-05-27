@@ -50,98 +50,7 @@
         }
 
     ],
-    "UP Show" : {
-        "content" : [
-            {
-                "name" : "year",
-                "value" : "2021"
-            },
-            {
-                "name" : "text",
-                "value" : "At Upshow, I gained valuable experience with React, Node, and Scrum Methodology. My role was to gather data metrics from our clients, development teams, and the uptime of our services, in order to provide a clear and comprehensive overview of the overall status of the company."
-            },
-            {
-                "type" : "metadata",
-                "label" : "WEBSITE",
-                "text" : "UP Show",
-                "link" : "https://www.upshow.tv/"
-            },
-            {
-                "type" : "metadata",
-                "label" : "PLATAFORM",
-                "text" : "Web"
-            },
-            {
-                "type" : "metadata",
-                "label" : "Stack",
-                "text" : "Node, Javascript, NextJS, React JS"
-            },
-            {
-                "type" : "image",
-                "link" : "UPshow.png"
-            }
-        ]
-    },
-    "Hacknoid" : {
-        "content" : [
-            {
-                "type" : "year",
-                "value" : "2018 to 2021"
-            },
-            {
-                "type" : "text",
-                "value" : "I began my employment at Hacknoid in June and started as a Junior role. Over time, I gained understanding of the entire company structure, including both backend and frontend systems. The backend at Hacknoid was built using Python and Django, and the frontend was migrated from PHP to React, a process that took approximately one and a half years to complete. During my time at this company, I accumulated 3 years of experience in Javascript, Python, and Mysql, as well as a minimal amount of exposure to PHP and React.JS"
-            },
-            {
-                "type" : "metadata",
-                "label" : "WEBSITE",
-                "text" : "Hacknoid",
-                "link" : "https://www.hacknoid.com"
-            },
-            {
-                "type" : "metadata",
-                "label" : "PLATAFORM",
-                "text" : "Web"
-            },
-            {
-                "type" : "metadata",
-                "label" : "Stack",
-                "text" : "Python, Javascript, NextJS, React"
-            },
-            {
-                "type" : "image",
-                "link" : "hacknoid.png"
-            }
-        ]
-    },
-    "Gestion Total" : {
-        "content" : [
-            {
-                "type" : "year",
-                "value" : "2017 to 2018"
-            },
-            {
-                "type" : "text",
-                "value" : "The primary product offered by this company is an ERPnext system for internal administration, utilizing a backend built with Python and a frontend developed in JavaScript. Additionally, the system includes an API created using PHP. The technical challenges faced revolve primarily around mathematical complexities within the code, with a focus on optimizing the response time for each database query."
-            },
-            {
-                "type" : "metadata",
-                "label" : "PLATAFORM",
-                "text" : "Web"
-            },
-            {
-                "type" : "metadata",
-                "label" : "Stack",
-                "text" : "Python, Javascript"
-            },
-            {
-                "type" : "image",
-                "link" : "gestiontotal.png"
-            }
-        ]
-    },
-    "Meteor" : {
-        "content" : [
+    "Meteor" : [
             {
                 "type" : "text",
                 "value" : "Meteor is an open-source web and mobile development platform that uses JavaScript on both the client and server sides, with a real-time data system and a wide range of open-source packages and libraries to facilitate integration with other web technologies and services."
@@ -151,20 +60,25 @@
                 "value" : "This website is intended for stock management in a store, which allows control of the database of product brands, types, quantities, and sales history, all in a MongoDB database."
             },
             {
-                "type" : "metadata",
-                "label" : "REPO",
-                "text" : "Github",
-                "link" : "https://github.com/Mauro-js/Meteor_practices"
-            },
-            {
-                "type" : "metadata",
-                "label" : "PLATAFORM",
-                "text" : "Web"
-            },
-            {
-                "type" : "metadata",
-                "label" : "Stack",
-                "text" : "Meteor, React, MongoDB"
+                "type" : "list",
+                "children" : [
+                    {
+                        "type" : "metadata",
+                        "label" : "REPO",
+                        "span" : "Github",
+                        "href" : "https://github.com/Mauro-js/Meteor_practices"
+                    },
+                    {
+                        "type" : "metadata",
+                        "label" : "PLATAFORM",
+                        "span" : "Web"
+                    },
+                    {
+                        "type" : "metadata",
+                        "label" : "Stack",
+                        "span" : "Meteor, React, MongoDB"
+                    }
+                ]
             },
             {
                 "type" : "image",
@@ -182,10 +96,8 @@
                 "type" : "image",
                 "link" : "MeteorLogin.png"
             }
-        ]
-    },
-    "Flask" : {
-        "content" : [
+        ],
+    "Flask" : [
             {
                 "type" : "text",
                 "value" : "Flask is a Python web framework that allows developers to quickly and easily create web applications. Flask is considered a micro-framework, which means that it is designed to be lightweight and flexible, and does not include unnecessary additional components. Flask provides the basic tools for creating web applications, such as URL routing, cookie management, support for Jinja2 templates, and more. Although Flask is considered a beginner-level framework, it is highly scalable and extensible, and is used by developers of all levels of experience to create web applications from simple to complex."
@@ -211,5 +123,4 @@
                 "text" : "Flask, Jinja2, Postgres, Python"
             }
         ]
-    }
 }

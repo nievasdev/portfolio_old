@@ -1,0 +1,150 @@
+{
+    "upshow" : [
+        {
+            "type" : "year",
+            "value" : "2021"
+        },
+        {
+            "type" : "text",
+            "value" : "At Upshow, I gained valuable experience with React, Node, and Scrum Methodology. My role was to gather data metrics from our clients, development teams, and the uptime of our services, in order to provide a clear and comprehensive overview of the overall status of the company."
+        },
+        {
+            "type" : "list",
+            "children" :  [
+                {
+                    "type" : "metadata",
+                    "label" : "WEBSITE",
+                    "span" : "UP Show",
+                    "href" : "https://www.upshow.tv/"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "PLATAFORM",
+                    "span" : "Web"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Stack",
+                    "span" : "Node, Javascript, NextJS, React JS"
+                }
+            ]
+        },
+        {
+            "type" : "image",
+            "link" : "upshow"
+        }
+    ],
+"hacknoid" : [
+        {
+            "type" : "year",
+            "value" : "2018 to 2021"
+        },
+        {
+            "type" : "text",
+            "value" : "I began my employment at Hacknoid in June and started as a Junior role. Over time, I gained understanding of the entire company structure, including both backend and frontend systems. The backend at Hacknoid was built using Python and Django, and the frontend was migrated from PHP to React, a process that took approximately one and a half years to complete. During my time at this company, I accumulated 3 years of experience in Javascript, Python, and Mysql, as well as a minimal amount of exposure to PHP and React.JS"
+        },
+        {
+            "type" : "list",
+            "children": [
+                {
+                    "type" : "metadata",
+                    "label" : "WEBSITE",
+                    "span" : "Hacknoid",
+                    "href" : "https://www.hacknoid.com"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "PLATAFORM",
+                    "span" : "Web"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Stack",
+                    "span" : "Python, Javascript, NextJS, React"
+                }
+            ]
+        },
+        {
+            "type" : "image",
+            "link" : "hacknoid"
+        }
+    ],
+"gestion_total" : [
+        {
+            "type" : "year",
+            "value" : "2017 to 2018"
+        },
+        {
+            "type" : "text",
+            "value" : "The primary product offered by this company is an ERPnext system for internal administration, utilizing a backend built with Python and a frontend developed in JavaScript. Additionally, the system includes an API created using PHP. The technical challenges faced revolve primarily around mathematical complexities within the code, with a focus on optimizing the response time for each database query."
+        },
+        {
+            "type": "list",
+            "children":[
+                {
+                    "type" : "metadata",
+                    "label" : "Test Website",
+                    "span" : "Noxatech Vercel",
+                    "href" : "https://novatech.vercel.app/"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Website",
+                    "span" : "Novatech",
+                    "href" : "https://www.novatech.com.uy"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Plataform",
+                    "span" : "Web"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Stack",
+                    "span" : "React, Nodemailer, Tsparticles"
+                }
+            ]
+        },
+        {
+            "type" : "image",
+            "link" : "gestiontotal"
+        }
+    ],
+    "novatech" : [
+        {
+            "type" : "year",
+            "value" : "2022"
+        },
+        {
+            "type" : "text",
+            "value" : "The most difficult thing with this website was building the particles in the background. I had to remake a specific solution for compatibility with the current React version."
+        },
+        {
+            "type": "list",
+            "children":[
+                {
+                    "type" : "metadata",
+                    "label" : "Test Website",
+                    "span" : "Web"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Stack",
+                    "span" : "Python, Javascript"
+                }
+            ]
+        },
+        {
+            "type" : "image",
+            "link" : "novatech"
+        },
+        {
+            "type" : "image",
+            "link" : "novatech2"
+        },
+        {
+            "type" : "image",
+            "link" : "novatech3"
+        }
+    ]
+}

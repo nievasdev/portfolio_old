@@ -21,7 +21,7 @@ const Works = () => {
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.3}>
-                        <WorkGridItem id="gestiontotal" title="Gestion Total" thumbnail={gestionTotal} reference={"works"} >
+                        <WorkGridItem id="gestion_total" title="Gestion Total" thumbnail={gestionTotal} reference={"works"} >
                             Business management software
                         </ WorkGridItem >
                     </Section>
