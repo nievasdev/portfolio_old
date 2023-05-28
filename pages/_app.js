@@ -1,16 +1,14 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import Layout from '../components/layouts/main';
-import Fonts from "../components/fonts";
-import theme from '../libs/theme';
-import { AnimatePresence } from "framer-motion";
-import "../public/global.css";
+import { ChakraProvider } from '@chakra-ui/react'
+import Layout from '../components/layouts/main'
+import Fonts from '../components/fonts'
+import theme from '../libs/theme'
+import { AnimatePresence } from 'framer-motion'
+import '../public/global.css'
 import MatrixRain from '../components/matrixRain'
-import { useState } from "react";
+import { useState } from 'react'
 
-
-const Website = ({ Component, pageProps, router}) => {
-
-    const [showed, setShowed] = useState(false);
+const Website = ({ Component, pageProps, router }) => {
+  /*const [showed, setShowed] = useState(false);
 
     let timeoutId;
     const onTimeout = async () => {
@@ -19,25 +17,26 @@ const Website = ({ Component, pageProps, router}) => {
 
     };
 
-    timeoutId = setTimeout(onTimeout, 3900);
+    timeoutId = setTimeout(onTimeout, 3900);*/
 
-    return (
-        <ChakraProvider theme={theme}>
-            <Fonts />
-            <MatrixRain />
-            {
-                !showed ?
-                <div className="loadingContent">
-                    <img src={`images/loading.gif`} className={"loading"} loading="once" />
-                </div> :
-                <Layout router={router}>
-                    <AnimatePresence exitBeforeEnter initial={true}>
-                        <Component {...pageProps} key={router.rute} />
-                    </AnimatePresence>
-                </Layout>
-            }
-        </ChakraProvider>
-    )  
+  return (
+    <ChakraProvider theme={theme}>
+      <Fonts />
+      <MatrixRain />
+      <Layout router={router}>
+        <AnimatePresence exitBeforeEnter initial={true}>
+          <Component {...pageProps} key={router.rute} />
+        </AnimatePresence>
+      </Layout>
+    </ChakraProvider>
+  )
 }
 
-export default Website; 
+export default Website
+
+/*
+  !showed ?
+                <div className="loadingContent">
+                    <Image src="images/loading.gif" className={"loading"} loading="once" />
+                </div> :
+                */
