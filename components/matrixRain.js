@@ -95,7 +95,7 @@ const RainStream = props => {
 			}}>
 			{stream.map((char, index) => (
 				<a
-					key={index}
+					key={index + Math.random()}
 					style={{
 						marginTop: 2,
 						// Reduce opacity for last chars
@@ -143,7 +143,7 @@ const MatrixRain = () => {
 			key={containerRef}
 			ref={containerRef}>
 			{Array(streamCount).fill().map(keyChar => (
-				<RainStream key={keyChar} height={containerSize?.height} theme={theme} />
+				<RainStream key={keyChar + " " + Math.random()} height={containerSize?.height} theme={theme} />
 			))}
 		</div>
 	);
