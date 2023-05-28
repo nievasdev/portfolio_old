@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react';
+import { Container, Link, List, ListItem } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { Title, Meta, WorkImage } from '../../components/work';
 import P from '../../components/paragraph';
@@ -24,7 +24,7 @@ const images = {
 
 const content = require('./projects.json')
 
-function SwitchElement(element, id) {
+function SwitchElement(element) {
   switch (element.type) {
     case 'text':
       return <P> {element.value} </P>
@@ -75,7 +75,7 @@ function Works() {
         </Section>
         {workContent.map(element => {
           delay += 0.1;
-          return <Section delay={delay} key={Math.random()} >{SwitchElement(element, id)}</Section>
+          return <Section delay={delay} key={Math.random()} >{SwitchElement(element)}</Section>
         })}
       </Container>
     </Layout>
