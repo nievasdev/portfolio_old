@@ -5,7 +5,7 @@ import theme from '../libs/theme'
 import { AnimatePresence } from 'framer-motion'
 import '../public/global.css'
 import MatrixRain from '../components/matrixRain'
-import { useState } from 'react'
+//import { useState } from 'react'
 
 const Website = ({ Component, pageProps, router }) => {
   /*const [showed, setShowed] = useState(false);
