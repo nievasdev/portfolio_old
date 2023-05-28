@@ -6,33 +6,26 @@ import P from '../../components/paragraph';
 import Layout from '../../components/layouts/article';
 import Section from '../../components/section';
 
-import hacknoidImage from '../../public/images/hacknoid.png';
-import upshowImage from '../../public/images/UPshow.png';
-import gestionTotal from '../../public/images/gestiontotal.png';
-import novatech from '../../public/images/novatech.png';
-import novatech2 from '../../public/images/novatech2.png';
-import novatech3 from '../../public/images/novatech3.png';
+import meteor from '../../public/images/MeteorBrands.png'
+import meteor2 from '../../public/images/MeteorProducts.png'
+import meteor3 from '../../public/images/MeteorSales.png'
+import meteor4 from '../../public/images/MeteorLogin.png'
+import tailwinds from '../../public/images/TailwindHome.png'
+import tailwinds2 from '../../public/images/TailwindPosts.png'
 
 const images = {
-    "hacknoid" : hacknoidImage,
-    "upshow" : upshowImage,
-    "gestiontotal" : gestionTotal,
-    "novatech" : novatech,
-    "novatech2" : novatech2,
-    "novatech3" : novatech3
+    "meteor" : meteor,
+    "meteor2" : meteor2,
+    "meteor3" : meteor3,
+    "meteor4" : meteor4,
+    "tailwinds" : tailwinds,
+    "tailwinds2" : tailwinds2
 }
 
-const content = require('./works.json')
+const content = require('./projects.json')
 
 function SwitchElement(element, id) {
   switch (element.type) {
-    case 'year':
-      return (
-        <Title reference={'works'}>
-          {' '}
-          {id.charAt(0).toUpperCase() + id.slice(1).replace("_"," ")} <Badge> {element.value}</Badge>{' '}
-        </Title>
-      )
     case 'text':
       return <P> {element.value} </P>
     case 'list':
@@ -69,11 +62,17 @@ function Works() {
 
   const workContent = content[id];
 
-  let delay = 0.0;
+  let delay = 0.1;
 
   return (
     <Layout title={`${id}`}>
       <Container>
+      <Section delay={delay} key={Math.random()} >
+      <Title reference={'projects'}>
+          {' '}
+          {id.charAt(0).toUpperCase() + id.slice(1).replace("_"," ")}
+        </Title>
+        </Section>
         {workContent.map(element => {
           delay += 0.1;
           return <Section delay={delay} key={Math.random()} >{SwitchElement(element, id)}</Section>

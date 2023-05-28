@@ -1,0 +1,125 @@
+{
+    "meteor" : [
+        {
+            "type" : "text",
+            "value" : "Meteor is an open-source web and mobile development platform that uses JavaScript on both the client and server sides, with a real-time data system and a wide range of open-source packages and libraries to facilitate integration with other web technologies and services."
+        },
+        {
+            "type" : "text",
+            "value" : "This website is intended for stock management in a store, which allows control of the database of product brands, types, quantities, and sales history, all in a MongoDB database."
+        },
+        {
+            "type" : "list",
+            "children" : [
+                {
+                    "type" : "metadata",
+                    "label" : "REPO",
+                    "span" : "Github",
+                    "href" : "https://github.com/Mauro-js/Meteor_practices"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "PLATAFORM",
+                    "span" : "Web"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Stack",
+                    "span" : "Meteor, React, MongoDB"
+                }
+            ]
+        },
+        {
+            "type" : "image",
+            "link" : "meteor"
+        },
+        {
+            "type" : "image",
+            "link" : "meteor2"
+        },
+        {
+            "type" : "image",
+            "link" : "meteor3"
+        },
+        {
+            "type" : "image",
+            "link" : "meteor4"
+        }
+    ],
+"flask" : [
+        {
+            "type" : "text",
+            "value" : "Flask is a Python web framework that allows developers to quickly and easily create web applications. Flask is considered a micro-framework, which means that it is designed to be lightweight and flexible, and does not include unnecessary additional components. Flask provides the basic tools for creating web applications, such as URL routing, cookie management, support for Jinja2 templates, and more. Although Flask is considered a beginner-level framework, it is highly scalable and extensible, and is used by developers of all levels of experience to create web applications from simple to complex."
+        },
+        {
+            "type" : "text",
+            "value" : "This website is intended for stock management in a store, which allows control of the database of product brands, types, quantities, and sales history, all in a MongoDB database."
+        },
+        {
+            "type":"list",
+            "children":[
+                {
+                    "type" : "metadata",
+                    "label" : "REPO",
+                    "span" : "Github",
+                    "href" : "https://github.com/Mauro-js/Meteor_practices"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "PLATAFORM",
+                    "span" : "Web"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Stack",
+                    "span" : "Flask, Jinja2, Postgres, Python"
+                }               
+            ]
+        }
+    ],
+    "tailwinds" : [
+        {
+            "type" : "text",
+            "value" : "Tailwind CSS is an open-source UI design framework for the quick and easy creation of custom designs for websites and web applications. The focus of Tailwind CSS is to provide a large number of pre-built and highly configurable utility classes that can be applied directly in HTML to design web pages without having to write custom CSS. This makes it easy to create highly customized and responsive designs, resulting in a smoother and enhanced user experience. Additionally, Tailwind CSS also includes a range of useful development tools and features, such as a default color palette, tools for creating shadows, animation effects, and more."
+        },
+        {
+            "type" : "text",
+            "value" : "This is a news website, created with Next.js, with the addition of a cache for cases where the user has poor network connectivity."
+        },
+        {
+            "type":"list",
+            "children":[
+                {
+                    "type" : "metadata",
+                    "label" : "Website",
+                    "span" : "Tailwind",
+                    "href" : "https://mauroapp.netlify.app/"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Repo",
+                    "span" : "Github",
+                    "href" : "https://github.com/Mauro-js/tailwind"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Plataform",
+                    "span" : "Web"
+                },
+                {
+                    "type" : "metadata",
+                    "label" : "Stack",
+                    "span" : "NextJS, React, Tailwind"
+                }            
+            ]
+        },
+        {
+            "type" : "image",
+            "link" : "tailwinds"
+        },
+        {
+            "type" : "image",
+            "link" : "tailwinds2"
+        }
+    ]
+}
