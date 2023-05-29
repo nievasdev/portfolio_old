@@ -10,7 +10,6 @@ import {
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import Paragraph from '../components/paragraph'
 import { PostSection, PostLabel } from '../components/post'
 import { Highlighted } from '../components/text'
 import ReactTypingEffect from 'react-typing-effect'
@@ -76,7 +75,7 @@ const Page = () => {
           </Section>
           <Section delay={0.4}>
             <Heading variant="section-title">Me</Heading>
-            <Paragraph>
+            <p className="paragraph">
               As a highly motivated and young computer enthusiast, I have a
               strong passion for programming and have been self-taught since the
               age of 12. Currently, I am pursuing a degree in computer
@@ -87,7 +86,7 @@ const Page = () => {
               bring my expertise and passion to a new challenge, where I can
               continue to grow as a developer and make a meaningful contribution
               to the company.
-            </Paragraph>
+            </p>
             <Box align="center" my={12}>
               <NextLink href="/works">
                 <Button colorScheme="teal">
@@ -124,10 +123,6 @@ const Page = () => {
               Born in Mercedes, Uruguay.
             </PostSection>
           </Section>
-          <Box align="center" opacity={0.04} fontSize="sm">
-            This website is built based on the{' '}
-            <a href="https://www.craftz.dog/">Takuya Matsuyama website</a>.
-          </Box>
         </Container>
       </Layout>
     </>

@@ -4,7 +4,6 @@ import styled from '@emotion/styled'
 import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, Highlighted, WorkImage } from './text'
-import P from './paragraph'
 import Layout from './layouts/article'
 import Section from './section'
 
@@ -29,7 +28,7 @@ function SwitchElement(element, id) {
         </Title>
       )
     case 'text':
-      return <P> {element.value} </P>
+      return <p className="paragraph"> {element.value} </p>
     case 'list':
       return (
         <List ml={4} my={4}>
