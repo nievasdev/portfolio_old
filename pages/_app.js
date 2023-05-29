@@ -1,7 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import Layout from '../components/layouts/main'
 import Fonts from '../components/fonts'
-import theme from '../libs/theme'
+import theme from '../components/theme'
 import { AnimatePresence } from 'framer-motion'
 import '../public/global.css'
 import MatrixRain from '../components/matrixRain'
