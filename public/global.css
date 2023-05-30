@@ -9,6 +9,7 @@
   position: fixed; /* Establece la posición como fija para que la imagen no se mueva con el desplazamiento de la página */
   top: 40%; /* Establece la posición superior en 50% para que la imagen comience desde el punto medio de la página verticalmente */
   left: 50%; /* Establece la posición izquierda en 50% para que la imagen comience desde el punto medio de la página horizontalmente */
+  animation: glitch-effect;
   transform: translate(-50%, -50%); /* Usa la función translate para mover la imagen hacia arriba y hacia la izquierda en un 50% del ancho y alto de la imagen, respectivamente, para centrarla en la página */
 }
 
@@ -25,4 +26,63 @@
   text-align: justify;
   text-indent: 1em;
   hyphens: auto;
+}
+
+
+
+@keyframes glitch-effect {
+  0% {
+    clip: rect(277px, 400px, 167px, 0);
+ }
+  5.8823529412% {
+    clip: rect(31px, 400px, 178px, 0);
+ }
+  11.7647058824% {
+    clip: rect(167px, 400px, 251px, 0);
+ }
+  17.6470588235% {
+    clip: rect(125px, 400px, 115px, 0);
+ }
+  23.5294117647% {
+    clip: rect(225px, 400px, 2px, 0);
+ }
+  29.4117647059% {
+    clip: rect(210px, 400px, 107px, 0);
+ }
+  35.2941176471% {
+    clip: rect(119px, 400px, 15px, 0);
+ }
+  41.1764705882% {
+    clip: rect(230px, 400px, 176px, 0);
+ }
+  47.0588235294% {
+    clip: rect(295px, 400px, 92px, 0);
+ }
+  52.9411764706% {
+    clip: rect(85px, 400px, 288px, 0);
+ }
+  58.8235294118% {
+    clip: rect(282px, 400px, 276px, 0);
+ }
+  64.7058823529% {
+    clip: rect(197px, 400px, 272px, 0);
+ }
+  70.5882352941% {
+    clip: rect(118px, 400px, 29px, 0);
+ }
+  76.4705882353% {
+    clip: rect(85px, 400px, 123px, 0);
+ }
+  82.3529411765% {
+    clip: rect(187px, 400px, 215px, 0);
+ }
+  88.2352941176% {
+    clip: rect(185px, 400px, 91px, 0);
+ }
+  94.1176470588% {
+    clip: rect(100px, 400px, 164px, 0);
+ }
+  100% {
+    clip: rect(107px, 400px, 294px, 0);
+ }
 }
