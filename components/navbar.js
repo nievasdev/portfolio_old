@@ -1,4 +1,3 @@
-import Logo from './logo'
 import NextLink from 'next/link'
 import {
   Container,
@@ -14,7 +13,6 @@ import {
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
-import { IoLogoGithub } from 'react-icons/io5'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
@@ -44,9 +42,7 @@ const Navbar = props => {
     <Box
       position="fixed"
       as="nav"
-      w="100%"
       bg={useColorModeValue('#ffffff40', '#20202380')}
-      style={{ backdropFilter: 'blur(10px' }}
       zIndex={1}
       {...props}
     >
@@ -55,69 +51,25 @@ const Navbar = props => {
         p={2}
         maxW="container.md"
         wrap="wrap"
-        align="center"
-        justify="space-between"
+        align="center" // Centrar horizontalmente los elementos del navbar
       >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo />
-          </Heading>
-        </Flex>
         <Stack
-          direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
-          flexGrow={1}
-          mt={{ base: 4, nmd: 0 }}
+          direction="column"
+          mt={4}
+          spacing={2} // Espaciado entre elementos del stack
+          align="center" // Centrar horizontalmente los elementos del stack
         >
+          <ThemeToggleButton />
+          <LinkItems href="/" path={path}>
+            Home
+          </LinkItems>
           <LinkItems href="/works" path={path}>
             Works
           </LinkItems>
           <LinkItems href="/projects" path={path}>
             Projects
           </LinkItems>
-          <Link
-            target="_blank"
-            href="https://github.com/Mauro-js/portfolio"
-            bg={undefined}
-            color={inactiveColor}
-            align="rigth"
-            flex={1}
-          >
-            <IoLogoGithub /> Source
-          </Link>
         </Stack>
-        <Box flex={1} align="rigth">
-          <ThemeToggleButton />
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
-                </NextLink>
-                <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>Projects</MenuItem>
-                </NextLink>
-                <NextLink
-                  as={Link}
-                  href="https://github.com/Mauro-js/portfolio"
-                >
-                  <MenuItem as={Link}> View Source</MenuItem>
-                </NextLink>
-              </MenuList>
-            </Menu>
-          </Box>
-        </Box>
       </Container>
     </Box>
   )

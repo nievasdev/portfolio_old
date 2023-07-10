@@ -1,12 +1,14 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Flex, Image, Box, Link } from '@chakra-ui/react'
 import Layout from '../components/layouts/main'
 import Fonts from '../components/fonts'
 import theme from '../components/theme'
 import { AnimatePresence } from 'framer-motion'
 import '../public/global.css'
-import MatrixRain from '../components/matrixRain'
 import { useState } from 'react'
-import { Image } from '@chakra-ui/react'
+import Navbar from '../components/navbar'
+
+import { IoLogoGithub } from 'react-icons/io5'
+import NextLink from 'next/link'
 
 const Website = ({ Component, pageProps, router }) => {
   const [showed, setShowed] = useState(false)
@@ -22,7 +24,6 @@ const Website = ({ Component, pageProps, router }) => {
   return (
     <ChakraProvider theme={theme}>
       <Fonts />
-      <MatrixRain />
       {!showed ? (
         <div className="loadingContent">
           <Image
@@ -33,11 +34,39 @@ const Website = ({ Component, pageProps, router }) => {
           />
         </div>
       ) : (
-        <Layout router={router}>
-          <AnimatePresence exitBeforeEnter initial={true}>
-            <Component {...pageProps} key={router.rute} />
-          </AnimatePresence>
-        </Layout>
+        <>
+          <Flex justify="flex-start">
+            <Navbar path={router.asPath} />
+          </Flex>
+          <Layout router={router}>
+            <AnimatePresence exitBeforeEnter initial={true}>
+              <Component {...pageProps} key={router.rute} />
+            </AnimatePresence>
+          </Layout>
+          <Flex
+            as="footer"
+            h="50px"
+            position="fixed"
+            bottom="0"
+            right="10" // Alinear el footer a la derecha
+            justifyContent="center" // Alinear elementos en el centro horizontalmente
+            alignItems="center" // Alinear elementos en el centro verticalmente
+          >
+            <NextLink href="https://github.com/Mauro-js/portfolio">
+              <Link
+                href="https://github.com/Mauro-js/portfolio"
+                target="_blank"
+                textAlign="center"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <IoLogoGithub />
+                <span style={{ marginLeft: '0.5rem' }}>Source</span>
+              </Link>
+            </NextLink>
+          </Flex>
+        </>
       )}
     </ChakraProvider>
   )
