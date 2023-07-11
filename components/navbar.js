@@ -1,46 +1,43 @@
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
+import React, { useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import NextLink from 'next/link'
 import {
   Container,
   Box,
+  Link,
   Stack,
-  Heading,
-  Flex,
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
-const LinkItems = ({ href, children }) => {
-  const router = useRouter()
-
-  const handleClick = () => {
-    router.push(href)
-  }
-
+const LinkItems = ({ href, path, children }) => {
+  const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteApha.900')
 
   return (
-    <Box
-      as="button"
-      p={2}
-      bg={router.pathname === href ? 'grassTeal' : undefined}
-      color={router.pathname === href ? '#202023' : inactiveColor}
-      borderRadius="md" // Agregar bordes redondeados
-      onClick={handleClick}
-    >
-      {children}
-    </Box>
+    <NextLink href={href}>
+      <Link
+        p={2}
+        bg={active ? 'grassTeal' : undefined}
+        color={active ? '#202023' : inactiveColor}
+        borderRadius="md" // Agregar bordes redondeados
+      >
+        {children}
+      </Link>
+    </NextLink>
   )
 }
 
-const Navbar = () => {
+const Navbar = ({ path }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
+
+  const inactiveColor = useColorModeValue('gray200', 'whiteApha.900')
 
   return (
     <Box
@@ -65,9 +62,15 @@ const Navbar = () => {
           display={{ base: 'none', md: 'flex' }}
         >
           <ThemeToggleButton />
-          <LinkItems href="/">Home</LinkItems>
-          <LinkItems href="/works">Works</LinkItems>
-          <LinkItems href="/projects">Projects</LinkItems>
+          <LinkItems href="/" path={path}>
+            Home
+          </LinkItems>
+          <LinkItems href="/works" path={path}>
+            Works
+          </LinkItems>
+          <LinkItems href="/projects" path={path}>
+            Projects
+          </LinkItems>
         </Stack>
         <Box display={{ base: 'block', md: 'none' }}>
           <IconButton
@@ -85,7 +88,7 @@ const Navbar = () => {
                 h="100%"
                 bg="rgba(0, 0, 0, 0.6)"
                 zIndex={9998}
-                onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic fuera de él
+                onClick={toggleMenu}
               />
               <Box
                 pos="absolute"
@@ -102,12 +105,18 @@ const Navbar = () => {
                   direction="column"
                   spacing={2}
                   align="center"
-                  onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic en un enlace
+                  onClick={toggleMenu}
                 >
                   <ThemeToggleButton />
-                  <LinkItems href="/">Home</LinkItems>
-                  <LinkItems href="/works">Works</LinkItems>
-                  <LinkItems href="/projects">Projects</LinkItems>
+                  <LinkItems href="/" path={path}>
+                    Home
+                  </LinkItems>
+                  <LinkItems href="/works" path={path}>
+                    Works
+                  </LinkItems>
+                  <LinkItems href="/projects" path={path}>
+                    Projects
+                  </LinkItems>
                 </Stack>
               </Box>
             </>
