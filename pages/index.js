@@ -5,8 +5,10 @@ import {
   Heading,
   Image,
   Button,
-  useColorModeValue
+  useColorModeValue,
+  SimpleGrid
 } from '@chakra-ui/react'
+import { WorkGridItem } from '../components/grid-item'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -14,11 +16,16 @@ import { PostSection, PostLabel } from '../components/post'
 import { Highlighted } from '../components/text'
 import ReactTypingEffect from 'react-typing-effect'
 
+import novatech from '../public/images/novatech.png'
+import hacknoid from '../public/images/hacknoid1.jpg'
+import upshow from '../public/images/UPshow.png'
+import gestionTotal from '../public/images/gestiontotal.png'
+
 const Page = () => {
   return (
     <>
       <Layout>
-        <Container>
+        <Container mt={-10} mb={100}>
           <Section delay={0.1}>
             <Box
               borderRadius="lg"
@@ -123,6 +130,56 @@ const Page = () => {
               Born in Mercedes, Uruguay.
             </PostSection>
           </Section>
+        </Container>
+      </Layout>
+
+      <Layout>
+        <Container>
+          <Section delay={0.1}>
+            <Heading as="h3" fontSize={20} mb={4} variant="section-title">
+              Works
+            </Heading>
+          </Section>
+          <SimpleGrid columns={[1, 1, 2]} gap={6}>
+            <Section delay={0.1}>
+              <WorkGridItem
+                id="upshow"
+                title="UP Show"
+                thumbnail={upshow}
+                reference={'works'}
+              />
+            </Section>
+            <Section delay={0.2}>
+              <WorkGridItem
+                id="hacknoid"
+                title="Hacknoid"
+                thumbnail={hacknoid}
+                reference={'works'}
+              >
+                Automated IT security audit service
+              </WorkGridItem>
+            </Section>
+            <Section delay={0.3}>
+              <WorkGridItem
+                id="gestion_total"
+                title="Gestion Total"
+                thumbnail={gestionTotal}
+                reference={'works'}
+              >
+                Business management software
+              </WorkGridItem>
+            </Section>
+            <Section delay={0.4}>
+              <WorkGridItem
+                id="novatech"
+                title="Novatech"
+                thumbnail={novatech}
+                reference={'works'}
+              >
+                A web page for a Sftware Factory
+              </WorkGridItem>
+            </Section>
+          </SimpleGrid>
         </Container>
       </Layout>
     </>
