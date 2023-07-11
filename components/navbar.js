@@ -30,6 +30,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
 
+  const backgroundColor = useColorModeValue('white', 'gray800');
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
@@ -155,7 +157,7 @@ const Navbar = () => {
                 left={0}
                 w="100%"
                 py={2}
-                bg={useColorModeValue('white', 'gray800')}
+                bg={backgroundColor}
                 boxShadow="md"
                 zIndex={9999}
                 borderRadius="md" // Agregar bordes redondeados al menú desplegable
