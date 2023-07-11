@@ -1,4 +1,4 @@
-import { ChakraProvider, Flex, Image, Box, Link } from '@chakra-ui/react'
+import { ChakraProvider, Flex, Image, Link } from '@chakra-ui/react'
 import Layout from '../components/layouts/main'
 import Fonts from '../components/fonts'
 import theme from '../components/theme'

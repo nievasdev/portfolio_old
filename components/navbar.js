@@ -29,7 +29,6 @@ const buttonStyle = (activeSection, inactiveColor, section = 'index') => {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
-  const inactiveColor = useColorModeValue('#000000', '#ffffff')
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -63,6 +62,8 @@ const Navbar = () => {
       setActiveSection('project')
     }
   }
+
+  const inactiveColor = useColorModeValue('#000000', '#ffffff')
 
   return (
     <Box
