@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-import NextLink from 'next/link'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-scroll'
 import {
   Container,
   Box,
-  Link,
   Stack,
   IconButton,
   useColorModeValue
@@ -12,32 +10,59 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
-const LinkItems = ({ href, path, children }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteApha.900')
+const buttonStyle = (activeSection, inactiveColor, section = 'index') => {
+  const defaultButton = {
+    padding: '5px',
+    borderRadius: '5px'
+  }
 
-  return (
-    <NextLink href={href}>
-      <Link
-        p={2}
-        bg={active ? 'grassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
-        borderRadius="md" // Agregar bordes redondeados
-      >
-        {children}
-      </Link>
-    </NextLink>
-  )
+  if (activeSection === section) {
+    defaultButton.backgroundColor = '#319795'
+    defaultButton.color = '#202023'
+  } else {
+    defaultButton.color = inactiveColor
+  }
+
+  return defaultButton
 }
 
-const Navbar = ({ path }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
+  const inactiveColor = useColorModeValue('#000000', '#ffffff')
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
-  const inactiveColor = useColorModeValue('gray200', 'whiteApha.900')
+  useEffect(() => {
+    const interval = setInterval(handleScroll, 500)
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
+
+  const handleScroll = () => {
+    const worksElement = document.getElementById('works')
+    const projectElement = document.getElementById('project')
+    const scrollPosition = window.scrollY
+
+    const worksOffset =
+      worksElement.getBoundingClientRect().top + window.scrollY - 10
+    const projectOffset =
+      projectElement.getBoundingClientRect().top + window.scrollY - 10
+
+    if (scrollPosition < worksOffset) {
+      setActiveSection('index')
+    } else if (
+      scrollPosition >= worksOffset &&
+      scrollPosition < projectOffset
+    ) {
+      setActiveSection('works')
+    } else {
+      setActiveSection('project')
+    }
+  }
 
   return (
     <Box
@@ -62,15 +87,48 @@ const Navbar = ({ path }) => {
           display={{ base: 'none', md: 'flex' }}
         >
           <ThemeToggleButton />
-          <LinkItems href="/" path={path}>
-            Home
-          </LinkItems>
-          <LinkItems href="/works" path={path}>
-            Works
-          </LinkItems>
-          <LinkItems href="/projects" path={path}>
-            Projects
-          </LinkItems>
+          <button style={buttonStyle(activeSection, inactiveColor)}>
+            <Link
+              to="index"
+              smooth={true}
+              duration={500}
+              spy={true}
+              activeClass="active"
+              offset={0}
+              onSetActive={() => setActiveSection('index')}
+              onSetInactive={() => setActiveSection('')}
+            >
+              Home
+            </Link>
+          </button>
+          <button style={buttonStyle(activeSection, inactiveColor, 'works')}>
+            <Link
+              to="works"
+              smooth={true}
+              duration={500}
+              spy={true}
+              activeClass="active"
+              offset={0}
+              onSetActive={() => setActiveSection('works')}
+              onSetInactive={() => setActiveSection('')}
+            >
+              Works
+            </Link>
+          </button>
+          <button style={buttonStyle(activeSection, inactiveColor, 'project')}>
+            <Link
+              to="project"
+              smooth={true}
+              duration={500}
+              spy={true}
+              activeClass="active"
+              offset={0}
+              onSetActive={() => setActiveSection('project')}
+              onSetInactive={() => setActiveSection('')}
+            >
+              Projects
+            </Link>
+          </button>
         </Stack>
         <Box display={{ base: 'block', md: 'none' }}>
           <IconButton
@@ -108,15 +166,42 @@ const Navbar = ({ path }) => {
                   onClick={toggleMenu}
                 >
                   <ThemeToggleButton />
-                  <LinkItems href="/" path={path}>
+                  <Link
+                    to="index"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    activeClass="active"
+                    offset={0}
+                    onSetActive={() => setActiveSection('index')}
+                    onSetInactive={() => setActiveSection('')}
+                  >
                     Home
-                  </LinkItems>
-                  <LinkItems href="/works" path={path}>
+                  </Link>
+                  <Link
+                    to="works"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    activeClass="active"
+                    offset={0}
+                    onSetActive={() => setActiveSection('works')}
+                    onSetInactive={() => setActiveSection('')}
+                  >
                     Works
-                  </LinkItems>
-                  <LinkItems href="/projects" path={path}>
+                  </Link>
+                  <Link
+                    to="project"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    activeClass="active"
+                    offset={0}
+                    onSetActive={() => setActiveSection('project')}
+                    onSetInactive={() => setActiveSection('')}
+                  >
                     Projects
-                  </LinkItems>
+                  </Link>
                 </Stack>
               </Box>
             </>
