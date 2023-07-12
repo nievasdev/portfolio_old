@@ -80,13 +80,6 @@ const Home = () => {
           a new challenge, where I can continue to grow as a developer and make
           a meaningful contribution to the company.
         </p>
-        <Box align="center" my={12}>
-          <NextLink href="/works">
-            <Button colorScheme="teal">
-              My porfolio <ChevronRightIcon />
-            </Button>
-          </NextLink>
-        </Box>
       </Section>
       <Section delay={0.8}>
         <Heading as="h3" variant="section-title">

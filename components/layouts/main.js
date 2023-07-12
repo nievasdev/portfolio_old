@@ -10,7 +10,7 @@ const Main = ({ children }) => {
           <title>MN - Home</title>
         </Head>
 
-        <Container maxW="container.md" pt={20}>
+        <Container maxW="container.lg" pt={20}>
           {children}
         </Container>
       </Box>

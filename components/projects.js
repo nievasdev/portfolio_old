@@ -9,13 +9,13 @@ import flask from '../public/images/flask.png'
 const Projects = () => {
   return (
     <Layout>
-      <Container>
+      <Container maxW="container.md">
         <Section delay={0.1}>
           <Heading as="h4" fontSize={20} mb={4} variant="section-title">
             Javascript
           </Heading>
         </Section>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <SimpleGrid columns={[1, 2, 3]} gap={6} pt={10} mt={-10} mb={100}>
           <Section delay={0.2}>
             <WorkGridItem
               id="meteor"
@@ -42,7 +42,7 @@ const Projects = () => {
             Python
           </Heading>
         </Section>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <SimpleGrid columns={[3, 3, 3]} gap={6}>
           <Section delay={0.5}>
             <WorkGridItem
               id="flask"

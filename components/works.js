@@ -10,8 +10,8 @@ import gestionTotal from '../public/images/gestiontotal.png'
 const Works = () => {
   return (
     <Layout>
-      <Container>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+      <Container maxW="container.md">
+        <SimpleGrid columns={[1, 2, 3]} gap={6}>
           <Section delay={0.1}>
             <WorkGridItem
               id="upshow"

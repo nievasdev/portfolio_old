@@ -12,14 +12,19 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 const buttonStyle = (activeSection, inactiveColor, section = 'index') => {
   const defaultButton = {
     padding: '5px',
-    borderRadius: '5px'
+    borderRadius: '5px',
+    transition: 'transform 0.2s ease, opacity 0.2s ease'
   }
 
   if (activeSection === section) {
     defaultButton.backgroundColor = '#319795'
     defaultButton.color = '#202023'
+    defaultButton.transform = 'scale(1.2)'
+    defaultButton.opacity = 1
   } else {
     defaultButton.color = inactiveColor
+    defaultButton.transform = 'scale(1)'
+    defaultButton.opacity = 0.8
   }
 
   return defaultButton
@@ -28,8 +33,6 @@ const buttonStyle = (activeSection, inactiveColor, section = 'index') => {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
-
-  const backgroundColor = useColorModeValue('white', 'gray800')
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -62,6 +65,15 @@ const Navbar = () => {
     } else {
       setActiveSection('project')
     }
+
+    // Verificar si el scrollPosition está debajo del todo
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight
+    const documentHeight = document.documentElement.scrollHeight
+
+    if (scrollPosition + windowHeight >= documentHeight) {
+      setActiveSection('project')
+    }
   }
 
   const inactiveColor = useColorModeValue('#000000', '#ffffff')
@@ -71,9 +83,13 @@ const Navbar = () => {
       mt={4}
       position="fixed"
       as="nav"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      zIndex={1}
-      borderRadius="md" // Agregar bordes redondeados al campo que engloba a todos
+      bg={isOpen ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0.7)'}
+      zIndex={30}
+      m={5}
+      pt={1}
+      pb={1}
+      borderRadius="md"
+      flexDirection={{ base: 'column', md: isOpen ? 'row' : 'column' }}
     >
       <Container
         display="flex"
@@ -131,11 +147,12 @@ const Navbar = () => {
             </Link>
           </button>
         </Stack>
-        <Box display={{ base: 'block', md: 'none' }}>
+        <Box display={{ md: 'none' }} w={'100%'}>
           <IconButton
             aria-label="Menu"
             icon={<HamburgerIcon />}
             onClick={toggleMenu}
+            m={1}
           />
           {isOpen && (
             <>
@@ -145,7 +162,6 @@ const Navbar = () => {
                 left={0}
                 w="100%"
                 h="100%"
-                bg="rgba(0, 0, 0, 0.6)"
                 zIndex={9998}
                 onClick={toggleMenu}
               />
@@ -155,7 +171,8 @@ const Navbar = () => {
                 left={0}
                 w="100%"
                 py={2}
-                bg={backgroundColor}
+                p={5}
+                bg="rgba(0, 0, 0, 0.9)"
                 boxShadow="md"
                 zIndex={9999}
                 borderRadius="md" // Agregar bordes redondeados al menú desplegable
@@ -164,6 +181,7 @@ const Navbar = () => {
                   direction="column"
                   spacing={2}
                   align="center"
+                  w={'100%'}
                   onClick={toggleMenu}
                 >
                   <Link

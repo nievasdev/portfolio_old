@@ -38,7 +38,7 @@ const Website = ({ Component, pageProps, router }) => {
         <div className="loadingContent">
           <Image
             borderRadius="lg"
-            src={`images/loading.gif`}
+            src={`images/loading2.gif`}
             className={'loading'}
             loading="once"
             alt="loading"
@@ -73,6 +73,7 @@ const Website = ({ Component, pageProps, router }) => {
                     opacity={0.5}
                   />
                 </div>
+
                 <div
                   style={{
                     position: 'relative',
@@ -96,3 +97,12 @@ const Website = ({ Component, pageProps, router }) => {
 }
 
 export default Website
+
+/* <Image
+            borderRadius="lg"
+            src={`images/loading.gif`}
+            className={'loading'}
+            loading="once"
+            alt="loading"
+            style={{ zIndex: 1 }}
+          />*/
