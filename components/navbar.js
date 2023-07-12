@@ -8,7 +8,6 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import ThemeToggleButton from './theme-toggle-button'
 
 const buttonStyle = (activeSection, inactiveColor, section = 'index') => {
   const defaultButton = {
@@ -30,7 +29,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
 
-  const backgroundColor = useColorModeValue('white', 'gray800');
+  const backgroundColor = useColorModeValue('white', 'gray800')
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -89,7 +88,6 @@ const Navbar = () => {
           align="center"
           display={{ base: 'none', md: 'flex' }}
         >
-          <ThemeToggleButton />
           <button style={buttonStyle(activeSection, inactiveColor)}>
             <Link
               to="index"
@@ -168,7 +166,6 @@ const Navbar = () => {
                   align="center"
                   onClick={toggleMenu}
                 >
-                  <ThemeToggleButton />
                   <Link
                     to="index"
                     smooth={true}

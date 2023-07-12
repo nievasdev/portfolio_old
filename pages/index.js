@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <>
       <Layout>
-        <Container mt={-10} mb={100} id="index">
+        <Container pt={10} mt={-10} mb={100} id="index">
           <Home />
         </Container>
       </Layout>
