@@ -6,7 +6,6 @@ import {
   Box,
   Stack,
   IconButton,
-  Link as ChakraLink,
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
