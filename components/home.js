@@ -74,8 +74,7 @@ const Home = () => {
           years of experience working with JavaScript and Python, I have a
           proven track record of successfully developing both backend and
           frontend applications. I am eager to bring my expertise and passion to
-          a new challenge, where I can continue to grow as a developer and make
-          a meaningful contribution to the company.
+          a new challenge.
         </p>
       </Section>
       <Section delay={0.8}>
