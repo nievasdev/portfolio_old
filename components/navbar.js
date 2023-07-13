@@ -30,7 +30,8 @@ const buttonStyle = (activeSection, inactiveColor, section = 'index') => {
   return defaultButton
 }
 
-const Navbar = () => {
+const Navbar = ({ path }) => {
+  const atHome = path === '/';
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
 
@@ -50,10 +51,10 @@ const Navbar = () => {
     const projectElement = document.getElementById('project')
     const scrollPosition = window.scrollY
 
-    const worksOffset =
-      worksElement.getBoundingClientRect().top + window.scrollY - 10
-    const projectOffset =
-      projectElement.getBoundingClientRect().top + window.scrollY - 10
+    const worksOffset = worksElement != null ?
+      worksElement.getBoundingClientRect().top + window.scrollY - 10 : 0
+    const projectOffset = projectElement != null ?
+      projectElement.getBoundingClientRect().top + window.scrollY - 10 : 0
 
     if (scrollPosition < worksOffset) {
       setActiveSection('index')
@@ -104,48 +105,52 @@ const Navbar = () => {
           align="center"
           display={{ base: 'none', md: 'flex' }}
         >
-          <button style={buttonStyle(activeSection, inactiveColor)}>
-            <Link
-              to="index"
-              smooth={true}
-              duration={500}
-              spy={true}
-              activeClass="active"
-              offset={0}
-              onSetActive={() => setActiveSection('index')}
-              onSetInactive={() => setActiveSection('')}
-            >
-              Home
-            </Link>
-          </button>
-          <button style={buttonStyle(activeSection, inactiveColor, 'works')}>
-            <Link
-              to="works"
-              smooth={true}
-              duration={500}
-              spy={true}
-              activeClass="active"
-              offset={0}
-              onSetActive={() => setActiveSection('works')}
-              onSetInactive={() => setActiveSection('')}
-            >
-              Works
-            </Link>
-          </button>
-          <button style={buttonStyle(activeSection, inactiveColor, 'project')}>
-            <Link
-              to="project"
-              smooth={true}
-              duration={500}
-              spy={true}
-              activeClass="active"
-              offset={0}
-              onSetActive={() => setActiveSection('project')}
-              onSetInactive={() => setActiveSection('')}
-            >
-              Projects
-            </Link>
-          </button>
+          {atHome &&
+            <>
+              <button style={buttonStyle(activeSection, inactiveColor)}>
+                <Link
+                  to="index"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  activeClass="active"
+                  offset={0}
+                  onSetActive={() => setActiveSection('index')}
+                  onSetInactive={() => setActiveSection('')}
+                >
+                  Home
+                </Link>
+              </button>
+              <button style={buttonStyle(activeSection, inactiveColor, 'works')}>
+                <Link
+                  to="works"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  activeClass="active"
+                  offset={0}
+                  onSetActive={() => setActiveSection('works')}
+                  onSetInactive={() => setActiveSection('')}
+                >
+                  Works
+                </Link>
+              </button>
+              <button style={buttonStyle(activeSection, inactiveColor, 'project')}>
+                <Link
+                  to="project"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  activeClass="active"
+                  offset={0}
+                  onSetActive={() => setActiveSection('project')}
+                  onSetInactive={() => setActiveSection('')}
+                >
+                  Projects
+                </Link>
+              </button>
+            </>
+          }
         </Stack>
         <Box display={{ md: 'none' }} w={'100%'}>
           <IconButton
