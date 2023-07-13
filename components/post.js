@@ -65,8 +65,8 @@ const Post = (content, id, hasTitle = false) => {
   let delay = 0.0
 
   return (
-    <Layout title={`${id}`}>
-      <Container>
+    <Layout title={`${id}`} p={10}>
+      <Container p={10} mb={10}>
         {hasTitle && (
           <Section delay={delay} key={Math.random()}>
             <Title reference={'projects'}>
