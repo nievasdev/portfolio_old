@@ -42,7 +42,7 @@ const Projects = () => {
             Python
           </Heading>
         </Section>
-        <SimpleGrid columns={[3, 3, 3]} gap={6}>
+        <SimpleGrid columns={[1, 2, 3]} gap={6}>
           <Section delay={0.5}>
             <WorkGridItem
               id="flask"
