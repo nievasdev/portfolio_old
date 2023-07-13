@@ -30,6 +30,9 @@ export const WorkGridItem = ({ children, id, title, thumbnail, reference}) => (
                     alt={title} 
                     className="grid-item-thumbnail"
                     placeholder="blur"
+                    style={{
+                        borderRadius: '10px'
+                      }}
                 />
                 <LinkOverlay href={`/${reference}/${id}`} >
                     <Text mt={2} fontSize={20} >
