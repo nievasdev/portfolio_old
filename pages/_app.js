@@ -64,7 +64,7 @@ const Website = ({ Component, pageProps, router }) => {
                 >
                   <Image
                     borderRadius="lg"
-                    src={`images/office.jpg`}
+                    src={`images/office2.jpg`}
                     alt="office"
                     objectFit="cover"
                     objectPosition="center"

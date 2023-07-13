@@ -85,9 +85,9 @@ const Navbar = () => {
       as="nav"
       bg={isOpen ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0.7)'}
       zIndex={30}
-      m={5}
-      pt={1}
-      pb={1}
+      m={2}
+      pt={2}
+      pb={2}
       borderRadius="md"
       flexDirection={{ base: 'column', md: isOpen ? 'row' : 'column' }}
     >
